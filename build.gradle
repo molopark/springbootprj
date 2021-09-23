@@ -35,5 +35,39 @@ test {
 }
 
 war {
+	def activeProfile='local'
+
+	if(project.hasProperty 'profile') {
+		activeProfile = profile
+	}
+
+	processResources {
+		exclude('application.properties', 'application-*.properties')
+	}
+
+	into('WEB-INF/classes') {
+		from "src/main/resources/application-${activeProfile}.properties"
+	}
+
+	rename "application-${activeProfile}.properties", "application.properties"
+
     archiveFileName="${rootProject.name}.war"
+}
+
+bootWar {
+	def activeProfile='local'
+
+	if(project.hasProperty 'profile') {
+		activeProfile = profile
+	}
+
+	processResources {
+		exclude('application.properties', 'application-*.properties')
+	}
+
+	into('WEB-INF/classes') {
+		from "src/main/resources/application-${activeProfile}.properties"
+	}
+
+	rename "application-${activeProfile}.properties", "application.properties"
 }
