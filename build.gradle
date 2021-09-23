@@ -6,8 +6,8 @@ plugins {
 }
 
 group = 'com.molo'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '16'
+version = '0.0.1'
+sourceCompatibility = '8'
 
 configurations {
 	compileOnly {
@@ -26,8 +26,14 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+war {
+    archiveFileName="${rootProject.name}.war"
 }
