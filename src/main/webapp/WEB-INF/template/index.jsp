@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,5 +8,6 @@
 </head>
 <body>
     <div>Hello, ${name}!</div>
+    <div>${dbdata}!</div>
 </body>
 </html>
