@@ -1,4 +1,4 @@
-package com.molo.springbootprj.dbsample;
+package com.molo.springbootprj.dbsample.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

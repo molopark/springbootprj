@@ -1,6 +1,6 @@
 package com.molo.springbootprj;
 
-import com.molo.springbootprj.dbsample.SampleMapper;
+import com.molo.springbootprj.dbsample.mapper.SampleMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
