@@ -24,6 +24,7 @@ public class UserProfileController {
 	
 	@GetMapping("/user/{id}")
 	public UserProfile getUserProfile(@PathVariable("id") String id) {
+		System.out.println("id:"+id);
 		return mapper.getUserProfile(id);
 	}
 	
